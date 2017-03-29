@@ -508,6 +508,7 @@ public class GestureController implements View.OnTouchListener {
         return isScrollDetected;
     }
 
+    @SuppressWarnings("WeakerAccess") // Public API
     protected boolean onFling(@NonNull MotionEvent e1, @NonNull MotionEvent e2,
             float vx, float vy) {
 
@@ -798,6 +799,10 @@ public class GestureController implements View.OnTouchListener {
          * @return true if event was consumed, false otherwise.
          */
         boolean onDoubleTap(@NonNull MotionEvent event);
+        
+       
+        boolean onFling(@NonNull MotionEvent e1, @NonNull MotionEvent e2,
+            float vx, float vy);
     }
 
     /**
